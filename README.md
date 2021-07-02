@@ -12,8 +12,10 @@ Inspired by `microsoft/vscode-remote-try-php` template, you can use the .devcont
 ```bash
     cp .env.example .env
 ```
-3. Add the DB env variables to the following to use the MariaDB docker container
+3. Add the DB env variables to use the MariaDB defined in the docker container. Also add the `ADMIN_APP_PATH` due to codespaces right now can't redirect subdomains at the moment.
 ```env
+ADMIN_APP_PATH=admin
+
 DB_CONNECTION=mysql
 DB_HOST=mariadb
 DB_PORT=3306
